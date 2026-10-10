@@ -239,31 +239,6 @@ export default function LoginPage() {
                       {t('login')}
                     </Button>
                   </Form.Item>
-                </Form>
-                <a
-                  href="https://3yuedaohang.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ display: 'block', textAlign: 'center', marginTop: 12, fontSize: 13, opacity: 0.85 }}
-                >
-                  🌐 站长博客 · 3yuedaohang.com
-                </a>
-                <a
-                  href="https://www.youtube.com/@zhanzhang3yue"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ display: 'block', textAlign: 'center', marginTop: 6, fontSize: 13, opacity: 0.85 }}
-                >
-                  📺 YouTube · @zhanzhang3yue
-                </a>
-                <a
-                  href="https://3yuedaohang.com/cn2/banwagong"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ display: 'block', textAlign: 'center', marginTop: 6, fontSize: 13, opacity: 0.85 }}
-                >
-                  🖥️ 机器推荐 · CN2 / 搬瓦工
-                </a>
               </div>
             )}
           </div>
