@@ -9,8 +9,13 @@ on:
       - "v*.*.*"
     paths:
       - "**.js"
+      - "**.ts"
+      - "**.tsx"
       - "**.css"
       - "**.html"
+      - "frontend/package.json"
+      - "frontend/package-lock.json"
+      - ".github/workflows/release.yml"
       - "**.sh"
       - "**.go"
       - "go.mod"
@@ -21,8 +26,13 @@ on:
   pull_request:
     paths:
       - "**.js"
+      - "**.ts"
+      - "**.tsx"
       - "**.css"
       - "**.html"
+      - "frontend/package.json"
+      - "frontend/package-lock.json"
+      - ".github/workflows/release.yml"
       - "**.sh"
       - "**.go"
       - "go.mod"

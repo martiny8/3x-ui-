@@ -10,11 +10,13 @@ on:
       - "**.mjs"
       - "**.cjs"
       - "**.ts"
+      - "**.tsx"
       - "**.html"
       - "**.css"
       - "frontend/package.json"
       - "frontend/package-lock.json"
       - ".nvmrc"
+      - ".github/workflows/ci.yml"
   push:
     branches:
       - main
@@ -26,11 +28,13 @@ on:
       - "**.mjs"
       - "**.cjs"
       - "**.ts"
+      - "**.tsx"
       - "**.html"
       - "**.css"
       - "frontend/package.json"
       - "frontend/package-lock.json"
       - ".nvmrc"
+      - ".github/workflows/ci.yml"
 
 permissions:
   contents: read
