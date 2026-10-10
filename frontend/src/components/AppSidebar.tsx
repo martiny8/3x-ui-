@@ -8,10 +8,8 @@ import {
   ApiOutlined,
   ClusterOutlined,
   CloseOutlined,
-  CloudServerOutlined,
   DashboardOutlined,
   GithubOutlined,
-  GlobalOutlined,
   ImportOutlined,
   LogoutOutlined,
   MenuOutlined,
@@ -22,7 +20,6 @@ import {
   TagsOutlined,
   TeamOutlined,
   ToolOutlined,
-  YoutubeOutlined,
 } from '@ant-design/icons';
 
 import { HttpUtil } from '@/utils';
@@ -31,9 +28,6 @@ import './AppSidebar.css';
 
 const SIDEBAR_COLLAPSED_KEY = 'isSidebarCollapsed';
 const REPO_URL = 'https://github.com/martiny8/3x-ui-';
-const SITE_URL = 'https://3yuedaohang.com';
-const YT_URL = 'https://www.youtube.com/@zhanzhang3yue';
-const VPS_URL = 'https://3yuedaohang.com/cn2/banwagong';
 const LOGOUT_KEY = '__logout__';
 
 type IconName = 'dashboard' | 'inbound' | 'team' | 'groups' | 'setting' | 'tool' | 'cluster' | 'logout' | 'apidocs';
@@ -72,54 +66,6 @@ function VersionBadge({ version, collapsed }: { version: string; collapsed?: boo
     >
       <GithubOutlined />
       {!collapsed && <span className="sider-version-text">{label}</span>}
-    </a>
-  );
-}
-
-function SiteBadge({ collapsed }: { collapsed?: boolean }) {
-  return (
-    <a
-      href={SITE_URL}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={`sider-version${collapsed ? ' is-collapsed' : ''}`}
-      aria-label="3yuedaohang.com"
-      title="站长博客 · 3yuedaohang.com"
-    >
-      <GlobalOutlined />
-      {!collapsed && <span className="sider-version-text">站长博客</span>}
-    </a>
-  );
-}
-
-function YoutubeBadge({ collapsed }: { collapsed?: boolean }) {
-  return (
-    <a
-      href={YT_URL}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={`sider-version${collapsed ? ' is-collapsed' : ''}`}
-      aria-label="YouTube"
-      title="YouTube · @zhanzhang3yue"
-    >
-      <YoutubeOutlined />
-      {!collapsed && <span className="sider-version-text">YouTube</span>}
-    </a>
-  );
-}
-
-function VpsBadge({ collapsed }: { collapsed?: boolean }) {
-  return (
-    <a
-      href={VPS_URL}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={`sider-version${collapsed ? ' is-collapsed' : ''}`}
-      aria-label="机器推荐"
-      title="机器推荐 · CN2 / 搬瓦工"
-    >
-      <CloudServerOutlined />
-      {!collapsed && <span className="sider-version-text">机器推荐</span>}
     </a>
   );
 }
@@ -261,9 +207,6 @@ export default function AppSidebar() {
           onClick={onMenuClick}
         />
         <div className="sider-footer">
-          <SiteBadge collapsed={collapsed} />
-          <YoutubeBadge collapsed={collapsed} />
-          <VpsBadge collapsed={collapsed} />
           <VersionBadge version={panelVersion} collapsed={collapsed} />
         </div>
       </Layout.Sider>
@@ -320,9 +263,6 @@ export default function AppSidebar() {
           onClick={(info) => { onMenuClick(info); setDrawerOpen(false); }}
         />
         <div className="drawer-footer">
-          <SiteBadge />
-          <YoutubeBadge />
-          <VpsBadge />
           <VersionBadge version={panelVersion} />
         </div>
       </Drawer>
