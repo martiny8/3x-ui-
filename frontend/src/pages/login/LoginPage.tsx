@@ -239,6 +239,7 @@ export default function LoginPage() {
                       {t('login')}
                     </Button>
                   </Form.Item>
+                </Form>
               </div>
             )}
           </div>
